@@ -1,5 +1,16 @@
 import tkinter as tk
-  
+from owlready2 import *
+
+onto_path.append("./data_project.owl")
+onto = get_ontology('data_project.owl').load()
+
+##try loading into tkinter window with label 
+onto.load()
+
+
+##search for movie that has title that user inputs 
+print(onto.search_one(hasContry = "Germany"))
+
 root=tk.Tk()
  
 # setting the windows size
@@ -26,6 +37,7 @@ def submit():
 # creating a label for
 # name using widget Label
 name_label = tk.Label(root, text = 'Movie Name', font=('calibre',10, 'bold'))
+
   
 # creating a entry for input
 # name using widget Entry
@@ -41,6 +53,7 @@ sub_btn=tk.Button(root,text = 'Submit', command = submit)
 name_label.grid(row=0,column=0)
 name_entry.grid(row=0,column=1)
 sub_btn.grid(row=2,column=1)
+
   
 # performing an infinite loop
 # for the window to display
