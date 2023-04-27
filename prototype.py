@@ -6,13 +6,13 @@ root=tk.Tk()
 root.geometry("600x400")
   
 # declaring string variable
-# for storing name and password
+# for storing name 
 name_var=tk.StringVar()
 passw_var=tk.StringVar()
  
   
 # defining a function that will
-# get the name and password and
+# get the name 
 # print them on the screen
 def submit():
  
