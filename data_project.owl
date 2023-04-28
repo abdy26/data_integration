@@ -1,504 +1,2990 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#"
-     xml:base="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:project="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project"/>
-    
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project"
+         xmlns="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#">
 
+<owl:Ontology rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project"/>
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+<owl:ObjectProperty rdf:about="#hasActor">
+  <owl:inverseOf rdf:resource="#isActor"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    
+<owl:ObjectProperty rdf:about="#isActor"/>
 
+<owl:ObjectProperty rdf:about="#hasBudget">
+  <owl:inverseOf rdf:resource="#isBudget"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasActor -->
+<owl:ObjectProperty rdf:about="#isBudget">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasActor">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isActor"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#hasConcensus">
+  <owl:inverseOf rdf:resource="#isConcensus"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#isConcensus"/>
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasBudget -->
+<owl:ObjectProperty rdf:about="#hasContry">
+  <owl:inverseOf rdf:resource="#isContry"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasBudget">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isBudget"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#isContry"/>
 
+<owl:ObjectProperty rdf:about="#hasCriticScore">
+  <owl:inverseOf rdf:resource="#isCriticScore"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasConcensus -->
+<owl:ObjectProperty rdf:about="#isCriticScore"/>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasConcensus">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isConcensus"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#hasDirector">
+  <owl:inverseOf rdf:resource="#isDirector"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#isDirector"/>
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasContry -->
+<owl:ObjectProperty rdf:about="#hasLanguage">
+  <owl:inverseOf rdf:resource="#isLanguage"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasContry">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isContry"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#isLanguage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#hasOverview">
+  <owl:inverseOf rdf:resource="#isOverView"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasCriticScore -->
+<owl:ObjectProperty rdf:about="#isOverView"/>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasCriticScore">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isCriticScore"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#hasProducer">
+  <owl:inverseOf rdf:resource="#isProducer"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#isProducer"/>
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasDirector -->
+<owl:ObjectProperty rdf:about="#hasProductionCO">
+  <owl:inverseOf rdf:resource="#isProductionCO"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasDirector">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isDirector"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#isProductionCO"/>
 
+<owl:ObjectProperty rdf:about="#hasPublicScore">
+  <owl:inverseOf rdf:resource="#isPublicScore"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasLanguage -->
+<owl:ObjectProperty rdf:about="#isPublicScore"/>
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasLanguage">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isLanguage"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
+<owl:ObjectProperty rdf:about="#hasTitle">
+  <owl:inverseOf rdf:resource="#isTitle"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isTitle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasWriter">
+  <owl:inverseOf rdf:resource="#isWriter"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isWriter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#movie_budget">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#movie_concensus">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#movie_critic_score">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#movie_language">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#movie_overview">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#movie_public_score">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#movie_title">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Actor">
+  <rdfs:subClassOf rdf:resource="#Crew"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Crew"/>
+
+<owl:Class rdf:about="#Contry"/>
+
+<owl:Class rdf:about="#Critic_Score"/>
+
+<owl:Class rdf:about="#Director">
+  <rdfs:subClassOf rdf:resource="#Crew"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Language"/>
+
+<owl:Class rdf:about="#Movie"/>
+
+<owl:Class rdf:about="#People_Score"/>
+
+<owl:Class rdf:about="#Producer">
+  <rdfs:subClassOf rdf:resource="#Crew"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Production_CO"/>
+
+<owl:Class rdf:about="#Writer">
+  <rdfs:subClassOf rdf:resource="#Crew"/>
+</owl:Class>
+
+<Language rdf:about="#en">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Language>
+
+<Language rdf:about="#ko">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Language>
+
+<Movie rdf:about="#About a Boy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasContry rdf:resource="# United States"/>
+  <hasContry rdf:resource="# France"/>
+  <hasContry rdf:resource="# Germany"/>
+  <hasProductionCO rdf:resource="#Tribeca Productions"/>
+  <hasActor rdf:resource="#Nicholas Hoult"/>
+  <hasActor rdf:resource="# Toni Collette"/>
+  <hasActor rdf:resource="# Victoria Smurfit"/>
+  <hasActor rdf:resource="# Sharon Small"/>
+  <hasActor rdf:resource="# Natalia Tena"/>
+  <hasActor rdf:resource="# Isabel Brook"/>
+  <hasActor rdf:resource="# Hugh Grant"/>
+  <hasActor rdf:resource="# Rachel Weisz"/>
+  <hasActor rdf:resource="# Nicholas Hutchison"/>
+  <hasWriter rdf:resource="#Peter Baynham"/>
+  <hasWriter rdf:resource="# Sarah Smith"/>
+  <hasDirector rdf:resource="#Chris Weitz"/>
+  <hasDirector rdf:resource="# Paul Weitz"/>
+  <hasProducer rdf:resource="#Jane Rosenthal"/>
+  <hasProducer rdf:resource="# Robert De Niro"/>
+  <hasProducer rdf:resource="# Brad Epstein"/>
+  <hasProducer rdf:resource="# Tim Bevan"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">About a Boy</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Will Freeman is a hip Londoner who one day realizes that his friends are all involved with the responsibilities of married life and that leaves him alone in the cold. Passing himself off as a single father, he starts to meet a string of single mums, confident in his ability to leave them behind when they start to ask for a commitment. But Will's hope of a continued bachelorhood is interrupted when he meets 12-year old Marcus, in many ways his complete opposite.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">About a Boy benefits tremendously from Hugh Grant's layered performance, as well as a funny, moving story that tugs at the heartstrings without tilting into treacle.</movie_concensus>
+</Movie>
+
+<Contry rdf:about="#United Kingdom">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Contry rdf:about="# United States">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Contry rdf:about="# France">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Contry rdf:about="# Germany">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Production_CO rdf:about="#Tribeca Productions">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Nicholas Hoult">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Toni Collette">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Victoria Smurfit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sharon Small">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Natalia Tena">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Isabel Brook">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Hugh Grant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rachel Weisz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Nicholas Hutchison">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Peter Baynham">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Writer rdf:about="# Sarah Smith">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Actor"/>
+</Writer>
+
+<Director rdf:about="#Chris Weitz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Director rdf:about="# Paul Weitz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Jane Rosenthal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Robert De Niro">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Actor"/>
+</Producer>
+
+<Producer rdf:about="# Brad Epstein">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Tim Bevan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Arthur Christmas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasContry rdf:resource="# United States"/>
+  <hasProductionCO rdf:resource="#Aardman Animations"/>
+  <hasProductionCO rdf:resource="# Sony Pictures Animation"/>
+  <hasActor rdf:resource="#James McAvoy"/>
+  <hasActor rdf:resource="# Hugh Laurie"/>
+  <hasActor rdf:resource="# Bill Nighy"/>
+  <hasActor rdf:resource="# Jim Broadbent"/>
+  <hasActor rdf:resource="# Imelda Staunton"/>
+  <hasActor rdf:resource="# Ashley Jensen"/>
+  <hasActor rdf:resource="# Ramona Marquez"/>
+  <hasActor rdf:resource="# Marc Wootton"/>
+  <hasActor rdf:resource="# Laura Linney"/>
+  <hasActor rdf:resource="# Eva Longoria"/>
+  <hasActor rdf:resource="# Michael Palin"/>
+  <hasActor rdf:resource="# Joan Cusack"/>
+  <hasActor rdf:resource="# Deborah Findlay"/>
+  <hasActor rdf:resource="# Rich Fulcher"/>
+  <hasActor rdf:resource="# Sarah Smith"/>
+  <hasActor rdf:resource="# Clint Dyer"/>
+  <hasActor rdf:resource="# Kerry Shale"/>
+  <hasActor rdf:resource="# Stewart Lee"/>
+  <hasActor rdf:resource="# Bronagh Gallagher"/>
+  <hasActor rdf:resource="# Kevin Cecil"/>
+  <hasActor rdf:resource="# Alistair McGowan"/>
+  <hasActor rdf:resource="# David Menkin"/>
+  <hasActor rdf:resource="# Kris Pearn"/>
+  <hasActor rdf:resource="# Ian Ashpitel"/>
+  <hasActor rdf:resource="# Rich Hall"/>
+  <hasActor rdf:resource="# Seeta Indrani"/>
+  <hasActor rdf:resource="# Jane Horrocks"/>
+  <hasActor rdf:resource="# Peter Baynham"/>
+  <hasActor rdf:resource="# Emma Kennedy"/>
+  <hasActor rdf:resource="# Dominic West"/>
+  <hasActor rdf:resource="# Jerry Lambert"/>
+  <hasActor rdf:resource="# Julia Davis"/>
+  <hasActor rdf:resource="# Robbie Coltrane"/>
+  <hasActor rdf:resource="# Iain McKee"/>
+  <hasActor rdf:resource="# Sanjeev Bhaskar"/>
+  <hasActor rdf:resource="# Andy Serkis"/>
+  <hasActor rdf:resource="# Tamsin Greig"/>
+  <hasActor rdf:resource="# Rhys Darby"/>
+  <hasActor rdf:resource="# Seamus Malone"/>
+  <hasActor rdf:resource="# Cody Cameron"/>
+  <hasActor rdf:resource="# David Schneider"/>
+  <hasActor rdf:resource="# Kevin Eldon"/>
+  <hasActor rdf:resource="# Danny John-Jules"/>
+  <hasActor rdf:resource="# Brian Cummings"/>
+  <hasWriter rdf:resource="#Peter Baynham"/>
+  <hasWriter rdf:resource="# Sarah Smith"/>
+  <hasDirector rdf:resource="#Sarah Smith"/>
+  <hasProducer rdf:resource="#Peter Lord"/>
+  <hasProducer rdf:resource="# David Sproxton"/>
+  <hasProducer rdf:resource="# Carla Shelley"/>
+  <hasProducer rdf:resource="# Steve Pegram"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur Christmas</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each Christmas, Santa and his vast army of highly trained elves produce gifts and distribute them around the world in one night. However, when one of 600 million children to receive a gift from Santa on Christmas Eve is missed, it is deemed ‚Äòacceptable‚Äô to all but one ‚Äì Arthur. Arthur Claus is Santa‚Äôs misfit son who executes an unauthorized rookie mission to get the last present half way around the globe before dawn on Christmas morning.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aardman Animations broadens their humor a bit for Arthur Christmas, a clever and earnest holiday film with surprising emotional strength.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Aardman Animations">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Sony Pictures Animation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#James McAvoy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Hugh Laurie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Bill Nighy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jim Broadbent">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Imelda Staunton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ashley Jensen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ramona Marquez">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Marc Wootton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Laura Linney">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Eva Longoria">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Michael Palin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Actor>
+
+<Actor rdf:about="# Joan Cusack">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Deborah Findlay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rich Fulcher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Clint Dyer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kerry Shale">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Stewart Lee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Bronagh Gallagher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kevin Cecil">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Alistair McGowan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# David Menkin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kris Pearn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ian Ashpitel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rich Hall">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Seeta Indrani">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jane Horrocks">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Peter Baynham">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Emma Kennedy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Dominic West">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jerry Lambert">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Julia Davis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Robbie Coltrane">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Iain McKee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sanjeev Bhaskar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Andy Serkis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Tamsin Greig">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rhys Darby">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Seamus Malone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Cody Cameron">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# David Schneider">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kevin Eldon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Danny John-Jules">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Brian Cummings">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Sarah Smith">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Peter Lord">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# David Sproxton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Carla Shelley">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Steve Pegram">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Bolt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Aardman Animations"/>
+  <hasProductionCO rdf:resource="# Sony Pictures Animation"/>
+  <hasActor rdf:resource="#John Travolta"/>
+  <hasActor rdf:resource="# Miley Cyrus"/>
+  <hasActor rdf:resource="# Susie Essman"/>
+  <hasActor rdf:resource="# Mark Walton"/>
+  <hasActor rdf:resource="# Malcolm McDowell"/>
+  <hasActor rdf:resource="# James Lipton"/>
+  <hasActor rdf:resource="# Greg Germann"/>
+  <hasActor rdf:resource="# Diedrich Bader"/>
+  <hasActor rdf:resource="# Nick Swardson"/>
+  <hasActor rdf:resource="# J.P. Manoux"/>
+  <hasActor rdf:resource="# Dan Fogelman"/>
+  <hasActor rdf:resource="# Kari Wahlgren"/>
+  <hasActor rdf:resource="# Chlo√´ Grace Moretz"/>
+  <hasActor rdf:resource="# Randy Savage"/>
+  <hasActor rdf:resource="# Ronn Moss"/>
+  <hasActor rdf:resource="# John DiMaggio"/>
+  <hasActor rdf:resource="# Daran Norris"/>
+  <hasActor rdf:resource="# Jeff Bennett"/>
+  <hasActor rdf:resource="# Brian Stepanek"/>
+  <hasActor rdf:resource="# Todd Cummings"/>
+  <hasWriter rdf:resource="#Peter Baynham"/>
+  <hasWriter rdf:resource="# Sarah Smith"/>
+  <hasDirector rdf:resource="#Chris Williams"/>
+  <hasDirector rdf:resource="# Byron Howard"/>
+  <hasProducer rdf:resource="#Clark Spencer"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolt</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolt is the star of the biggest show in Hollywood. The only problem is, he thinks it's real. After he's accidentally shipped to New York City and separated from Penny, his beloved co-star and owner, Bolt must harness all his "super powers" to find a way home.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aardman Animations broadens their humor a bit for Arthur Christmas, a clever and earnest holiday film with surprising emotional strength.</movie_concensus>
+</Movie>
+
+<Contry rdf:about="#United States">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Actor rdf:about="#John Travolta">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Miley Cyrus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Susie Essman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Mark Walton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Malcolm McDowell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# James Lipton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Greg Germann">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Diedrich Bader">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Nick Swardson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# J.P. Manoux">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Dan Fogelman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kari Wahlgren">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Chlo√´ Grace Moretz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Randy Savage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ronn Moss">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John DiMaggio">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Daran Norris">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jeff Bennett">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Brian Stepanek">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Todd Cummings">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Chris Williams">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Director rdf:about="# Byron Howard">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Clark Spencer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Carrie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Walt Disney Pictures"/>
+  <hasProductionCO rdf:resource="# Walt Disney Animation"/>
+  <hasActor rdf:resource="#Sissy Spacek"/>
+  <hasActor rdf:resource="# Piper Laurie"/>
+  <hasActor rdf:resource="# Amy Irving"/>
+  <hasActor rdf:resource="# William Katt"/>
+  <hasActor rdf:resource="# John Travolta"/>
+  <hasActor rdf:resource="# Nancy Allen"/>
+  <hasActor rdf:resource="# Betty Buckley"/>
+  <hasActor rdf:resource="# P.J. Soles"/>
+  <hasActor rdf:resource="# Priscilla Pointer"/>
+  <hasActor rdf:resource="# Sydney Lassick"/>
+  <hasActor rdf:resource="# Stefan Gierasch"/>
+  <hasActor rdf:resource="# Michael Talbott"/>
+  <hasActor rdf:resource="# Doug Cox"/>
+  <hasActor rdf:resource="# Harry Gold"/>
+  <hasActor rdf:resource="# Noelle North"/>
+  <hasWriter rdf:resource="#Dan Fogelman"/>
+  <hasWriter rdf:resource="# Chris Williams"/>
+  <hasDirector rdf:resource="#Brian De Palma"/>
+  <hasProducer rdf:resource="#Brian De Palma"/>
+  <hasProducer rdf:resource="# Paul Monash"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carrie</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reimagining of the classic horror tale about Carrie White, a shy girl outcast by her peers and sheltered by her deeply religious mother, who unleashes telekinetic terror on her small town after being pushed too far at her senior prom.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolt is a pleasant animated comedy that overcomes the story's familiarity with strong visuals and likable characters.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Walt Disney Pictures">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Walt Disney Animation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Sissy Spacek">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Piper Laurie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Amy Irving">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# William Katt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Travolta">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Nancy Allen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Betty Buckley">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# P.J. Soles">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Priscilla Pointer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sydney Lassick">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Stefan Gierasch">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Michael Talbott">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Doug Cox">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Harry Gold">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Noelle North">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Dan Fogelman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Writer rdf:about="# Chris Williams">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Brian De Palma">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Producer"/>
+</Director>
+
+<Producer rdf:about="# Paul Monash">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Casino Royale">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasContry rdf:resource="# Czech Republic"/>
+  <hasContry rdf:resource="# United States"/>
+  <hasContry rdf:resource="# Germany"/>
+  <hasContry rdf:resource="# Bahamas"/>
+  <hasProductionCO rdf:resource="#Redbank Films"/>
+  <hasActor rdf:resource="#Daniel Craig"/>
+  <hasActor rdf:resource="# Judi Dench"/>
+  <hasActor rdf:resource="# Eva Green"/>
+  <hasActor rdf:resource="# Jeffrey Wright"/>
+  <hasActor rdf:resource="# Mads Mikkelsen"/>
+  <hasActor rdf:resource="# Giancarlo Giannini"/>
+  <hasWriter rdf:resource="#Lawrence D. Cohen"/>
+  <hasDirector rdf:resource="#Martin Campbell"/>
+  <hasProducer rdf:resource="#Barbara Broccoli"/>
+  <hasProducer rdf:resource="# Michael G. Wilson"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casino Royale</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Chiffre, a banker to the world's terrorists, is scheduled to participate in a high-stakes poker game in Montenegro, where he intends to use his winnings to establish his financial grip on the terrorist market. M sends Bond ‚Äì on his maiden mission as a 00 Agent ‚Äì to attend this game and prevent Le Chiffre from winning. With the help of Vesper Lynd and Felix Leiter, Bond enters the most important poker game in his already dangerous career.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carrie is a horrifying look at supernatural powers, high school cruelty, and teen angst -- and it brings us one of the most memorable and disturbing prom scenes in history.</movie_concensus>
+</Movie>
+
+<Contry rdf:about="# Czech Republic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Contry rdf:about="# Bahamas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Production_CO rdf:about="#Redbank Films">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Daniel Craig">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Judi Dench">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Eva Green">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jeffrey Wright">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Mads Mikkelsen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Giancarlo Giannini">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Lawrence D. Cohen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Martin Campbell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Barbara Broccoli">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Michael G. Wilson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Coraline">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Eon Productions Ltd."/>
+  <hasProductionCO rdf:resource="# Sony Pictures Entertainment"/>
+  <hasProductionCO rdf:resource="# Metro-Goldwyn-Mayer"/>
+  <hasActor rdf:resource="#Dakota Fanning"/>
+  <hasActor rdf:resource="# Teri Hatcher"/>
+  <hasActor rdf:resource="# John Hodgman"/>
+  <hasActor rdf:resource="# Jennifer Saunders"/>
+  <hasActor rdf:resource="# Dawn French"/>
+  <hasActor rdf:resource="# Keith David"/>
+  <hasActor rdf:resource="# Robert Bailey Jr."/>
+  <hasActor rdf:resource="# Ian McShane"/>
+  <hasWriter rdf:resource="#Neal Purvis"/>
+  <hasWriter rdf:resource="# Robert Wade"/>
+  <hasWriter rdf:resource="# Anthony Waye"/>
+  <hasDirector rdf:resource="#Henry Selick"/>
+  <hasProducer rdf:resource="#Bill Mechanic"/>
+  <hasProducer rdf:resource="# Claire Jennings"/>
+  <hasProducer rdf:resource="# Henry Selick"/>
+  <hasProducer rdf:resource="# Mary Sandell"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coraline</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When Coraline moves to an old house, she feels bored and neglected by her parents. She finds a hidden door with a bricked up passage. During the night, she crosses the passage and finds a parallel world where everybody has buttons instead of eyes, with caring parents and all her dreams coming true. When the Other Mother invites Coraline to stay in her world forever, the girl refuses and finds that the alternate reality where she is trapped is only a trick to lure her.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casino Royale disposes of the silliness and gadgetry that plagued recent James Bond outings, and Daniel Craig delivers what fans and critics have been waiting for: a caustic, haunted, intense reinvention of 007.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Eon Productions Ltd.">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Sony Pictures Entertainment">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Metro-Goldwyn-Mayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Dakota Fanning">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Teri Hatcher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Hodgman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jennifer Saunders">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Dawn French">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Keith David">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Robert Bailey Jr.">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ian McShane">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Neal Purvis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Actor"/>
+</Writer>
+
+<Writer rdf:about="# Robert Wade">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Actor"/>
+</Writer>
+
+<Writer rdf:about="# Anthony Waye">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Actor"/>
+</Writer>
+
+<Director rdf:about="#Henry Selick">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Director>
+
+<Producer rdf:about="#Bill Mechanic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Claire Jennings">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Henry Selick">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Mary Sandell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Disclosure">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Eon Productions Ltd."/>
+  <hasProductionCO rdf:resource="# Sony Pictures Entertainment"/>
+  <hasProductionCO rdf:resource="# Metro-Goldwyn-Mayer"/>
+  <hasActor rdf:resource="#Neal Purvis"/>
+  <hasActor rdf:resource="# Robert Wade"/>
+  <hasActor rdf:resource="# Anthony Waye"/>
+  <hasWriter rdf:resource="#Sam Feder"/>
+  <hasDirector rdf:resource="#Sam Feder"/>
+  <hasDirector rdf:resource="# Amy Scholder"/>
+  <hasProducer rdf:resource="#Bill Mechanic"/>
+  <hasProducer rdf:resource="# Claire Jennings"/>
+  <hasProducer rdf:resource="# Henry Selick"/>
+  <hasProducer rdf:resource="# Mary Sandell"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disclosure</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A computer specialist is sued for sexual harassment by a former lover turned boss who initiated the act forcefully, which threatens both his career and his personal life.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casino Royale disposes of the silliness and gadgetry that plagued recent James Bond outings, and Daniel Craig delivers what fans and critics have been waiting for: a caustic, haunted, intense reinvention of 007.</movie_concensus>
+</Movie>
+
+<Writer rdf:about="#Sam Feder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Director"/>
+</Writer>
+
+<Director rdf:about="# Amy Scholder">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Movie rdf:about="#Django Unchained">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Laika"/>
+  <hasActor rdf:resource="#Jamie Foxx"/>
+  <hasActor rdf:resource="# Christoph Waltz"/>
+  <hasActor rdf:resource="# Leonardo DiCaprio"/>
+  <hasActor rdf:resource="# Kerry Washington"/>
+  <hasActor rdf:resource="# Samuel L. Jackson"/>
+  <hasActor rdf:resource="# Walton Goggins"/>
+  <hasActor rdf:resource="# Dennis Christopher"/>
+  <hasActor rdf:resource="# James Remar"/>
+  <hasActor rdf:resource="# David Steen"/>
+  <hasActor rdf:resource="# Dana Gourrier"/>
+  <hasActor rdf:resource="# Nichole Galicia"/>
+  <hasActor rdf:resource="# Laura Cayouette"/>
+  <hasActor rdf:resource="# Ato Essandoh"/>
+  <hasActor rdf:resource="# Sammi Rotibi"/>
+  <hasActor rdf:resource="# Escalante Lundy"/>
+  <hasActor rdf:resource="# Don Johnson"/>
+  <hasWriter rdf:resource="#Henry Selick"/>
+  <hasDirector rdf:resource="#Quentin Tarantino"/>
+  <hasProducer rdf:resource="#Stacey Sher"/>
+  <hasProducer rdf:resource="# Reginald Hudlin"/>
+  <hasProducer rdf:resource="# Pilar Savone"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Django Unchained</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With its vivid stop-motion animation combined with Neil Gaiman's imaginative story, Coraline is a film that's both visually stunning and wondrously entertaining.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Laika">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Jamie Foxx">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Christoph Waltz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Leonardo DiCaprio">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kerry Washington">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Samuel L. Jackson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Walton Goggins">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Dennis Christopher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# James Remar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# David Steen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Dana Gourrier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Nichole Galicia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Laura Cayouette">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ato Essandoh">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sammi Rotibi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Escalante Lundy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Don Johnson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Quentin Tarantino">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Director>
+
+<Producer rdf:about="#Stacey Sher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Reginald Hudlin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Pilar Savone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Doctor Zhivago">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasContry rdf:resource="# Italy"/>
+  <hasContry rdf:resource="# United Kingdom"/>
+  <hasContry rdf:resource="# Liechtenstein"/>
+  <hasProductionCO rdf:resource="#Laika"/>
+  <hasActor rdf:resource="#Omar Sharif"/>
+  <hasActor rdf:resource="# Julie Christie"/>
+  <hasActor rdf:resource="# Geraldine Chaplin"/>
+  <hasActor rdf:resource="# Rod Steiger"/>
+  <hasActor rdf:resource="# Alec Guinness"/>
+  <hasActor rdf:resource="# Tom Courtenay"/>
+  <hasActor rdf:resource="# Siobhan McKenna"/>
+  <hasActor rdf:resource="# Ralph Richardson"/>
+  <hasActor rdf:resource="# Jeffrey Rockland"/>
+  <hasWriter rdf:resource="#Henry Selick"/>
+  <hasDirector rdf:resource="#David Lean"/>
+  <hasProducer rdf:resource="#Carlo Ponti"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doctor Zhivago</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doctor Zhivago is the filmed adapation of the Russian novel by Boris Pasternak from director David Lean that was an international success and today deemed a classic. Omar Sharif and Julie Christie play two protagonists who in fact love each other yet because of their current situation cannot find a way be together.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With its vivid stop-motion animation combined with Neil Gaiman's imaginative story, Coraline is a film that's both visually stunning and wondrously entertaining.</movie_concensus>
+</Movie>
+
+<Contry rdf:about="# Italy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Contry rdf:about="# United Kingdom">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Contry rdf:about="# Liechtenstein">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Actor rdf:about="#Omar Sharif">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Julie Christie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Geraldine Chaplin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rod Steiger">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Alec Guinness">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Tom Courtenay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Siobhan McKenna">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ralph Richardson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jeffrey Rockland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#David Lean">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Carlo Ponti">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Dracula">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasProductionCO rdf:resource="#unknown"/>
+  <hasActor rdf:resource="#Claes Bang"/>
+  <hasActor rdf:resource="# Dolly Wells"/>
+  <hasActor rdf:resource="# John Heffernan"/>
+  <hasWriter rdf:resource="#Tod Browning"/>
+  <hasDirector rdf:resource="#Tod Browning"/>
+  <hasDirector rdf:resource="# Carl Laemmle Jr."/>
+  <hasProducer rdf:resource="#Carlo Ponti"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dracula</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When Dracula leaves the captive Jonathan Harker and Transylvania for London in search of Mina Harker -- the spitting image of Dracula's long-dead wife, Elisabeta -- obsessed vampire hunter Dr. Van Helsing sets out to end the madness.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disclosure engrossingly illuminates the history and effects of the way transgender lives are depicted onscreen -- and outlines how much progress still needs to be made.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#unknown">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Claes Bang">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Dolly Wells">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Heffernan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Tod Browning">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Director"/>
+</Writer>
+
+<Director rdf:about="# Carl Laemmle Jr.">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Movie rdf:about="#Ex Machina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasProductionCO rdf:resource="#A Band Apart"/>
+  <hasActor rdf:resource="#Domhnall Gleeson"/>
+  <hasActor rdf:resource="# Alicia Vikander"/>
+  <hasActor rdf:resource="# Oscar Isaac"/>
+  <hasActor rdf:resource="# Sonoya Mizuno"/>
+  <hasActor rdf:resource="# Claire Selby"/>
+  <hasActor rdf:resource="# Symara Templeman"/>
+  <hasActor rdf:resource="# Gana Bayarsaikhan"/>
+  <hasActor rdf:resource="# Tiffany Pisani"/>
+  <hasActor rdf:resource="# Corey Johnson"/>
+  <hasActor rdf:resource="# Evie Wray"/>
+  <hasActor rdf:resource="# Deborah Rosan"/>
+  <hasWriter rdf:resource="#Quentin Tarantino"/>
+  <hasDirector rdf:resource="#Alex Garland"/>
+  <hasProducer rdf:resource="#Andrew Macdonald"/>
+  <hasProducer rdf:resource="# Allon Reich"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ex Machina</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caleb, a 26 year old coder at the world's largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company. But when Caleb arrives at the remote location he finds that he will have to participate in a strange and fascinating experiment in which he must interact with the world's first true artificial intelligence, housed in the body of a beautiful robot girl.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bold, bloody, and stylistically daring, Django Unchained is another incendiary masterpiece from Quentin Tarantino.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#A Band Apart">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Domhnall Gleeson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Alicia Vikander">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Oscar Isaac">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sonoya Mizuno">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Claire Selby">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Symara Templeman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Gana Bayarsaikhan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Tiffany Pisani">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Corey Johnson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Evie Wray">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Deborah Rosan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Alex Garland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Director>
+
+<Producer rdf:about="#Andrew Macdonald">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Allon Reich">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Four Weddings and a Funeral">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasProductionCO rdf:resource="#Metro Goldwyn Mayer"/>
+  <hasActor rdf:resource="#Hugh Grant"/>
+  <hasActor rdf:resource="# Andie MacDowell"/>
+  <hasActor rdf:resource="# James Fleet"/>
+  <hasActor rdf:resource="# Simon Callow"/>
+  <hasActor rdf:resource="# John Hannah"/>
+  <hasActor rdf:resource="# Kristin Scott Thomas"/>
+  <hasActor rdf:resource="# David Bower"/>
+  <hasActor rdf:resource="# Charlotte Coleman"/>
+  <hasActor rdf:resource="# David Haig"/>
+  <hasActor rdf:resource="# Rowan Atkinson"/>
+  <hasActor rdf:resource="# Sophie Thompson"/>
+  <hasActor rdf:resource="# Anna Chancellor"/>
+  <hasActor rdf:resource="# Corin Redgrave"/>
+  <hasWriter rdf:resource="#Boris Pasternak"/>
+  <hasWriter rdf:resource="# Robert Bolt"/>
+  <hasDirector rdf:resource="#Mike Newell"/>
+  <hasProducer rdf:resource="#Duncan Kenworthy"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Four Weddings and a Funeral</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Four Weddings And A Funeral is a British comedy about a British Man named Charles and an American Woman named Carrie who go through numerous weddings before they determine if they are right for one another.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It may not be the best of David Lean's epics, but Dr. Zhivago is still brilliantly photographed and sweepingly romantic.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Metro Goldwyn Mayer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Hugh Grant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Andie MacDowell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# James Fleet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Simon Callow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Hannah">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kristin Scott Thomas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# David Bower">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Charlotte Coleman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# David Haig">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rowan Atkinson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sophie Thompson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Anna Chancellor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Corin Redgrave">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Boris Pasternak">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Writer rdf:about="# Robert Bolt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Mike Newell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Duncan Kenworthy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Hairspray">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasContry rdf:resource="# United Kingdom"/>
+  <hasContry rdf:resource="# Canada"/>
+  <hasProductionCO rdf:resource="#Universal Pictures"/>
+  <hasActor rdf:resource="#Nikki Blonsky"/>
+  <hasActor rdf:resource="# John Travolta"/>
+  <hasActor rdf:resource="# Michelle Pfeiffer"/>
+  <hasActor rdf:resource="# Christopher Walken"/>
+  <hasActor rdf:resource="# Amanda Bynes"/>
+  <hasActor rdf:resource="# James Marsden"/>
+  <hasActor rdf:resource="# Queen Latifah"/>
+  <hasActor rdf:resource="# Zac Efron"/>
+  <hasActor rdf:resource="# Brittany Snow"/>
+  <hasActor rdf:resource="# Allison Janney"/>
+  <hasActor rdf:resource="# Elijah Kelley"/>
+  <hasActor rdf:resource="# Jerry Stiller"/>
+  <hasWriter rdf:resource="#John L. Balderston"/>
+  <hasWriter rdf:resource="# Garrett Fort"/>
+  <hasWriter rdf:resource="# Dudley Murphy"/>
+  <hasWriter rdf:resource="# Bram Stoker"/>
+  <hasDirector rdf:resource="#Adam Shankman"/>
+  <hasProducer rdf:resource="#Craig Zadan"/>
+  <hasProducer rdf:resource="# Neil Meron"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hairspray</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pleasantly plump teenager, Tracy Turnblad and her best friend, Penny Pingleton audition to be on The Corny Collins Show ‚Äì and Tracy wins. But when scheming Amber Von Tussle and her mother plot to destroy Tracy, it turns to chaos.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bela Lugosi's timeless portrayal of Dracula in this creepy and atmospheric 1931 film has set the standard for major vampiric roles since.</movie_concensus>
+</Movie>
+
+<Contry rdf:about="# Canada">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Production_CO rdf:about="#Universal Pictures">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Nikki Blonsky">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Michelle Pfeiffer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Christopher Walken">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Amanda Bynes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# James Marsden">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Queen Latifah">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Zac Efron">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Brittany Snow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Allison Janney">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Elijah Kelley">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jerry Stiller">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#John L. Balderston">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Writer rdf:about="# Garrett Fort">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Writer rdf:about="# Dudley Murphy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Writer rdf:about="# Bram Stoker">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Adam Shankman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Craig Zadan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Neil Meron">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Her">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#DNA Films"/>
+  <hasActor rdf:resource="#Joaquin Phoenix"/>
+  <hasActor rdf:resource="# Scarlett Johansson"/>
+  <hasActor rdf:resource="# Amy Adams"/>
+  <hasActor rdf:resource="# Rooney Mara"/>
+  <hasActor rdf:resource="# Olivia Wilde"/>
+  <hasActor rdf:resource="# Chris Pratt"/>
+  <hasActor rdf:resource="# Matt Letscher"/>
+  <hasActor rdf:resource="# Portia Doubleday"/>
+  <hasWriter rdf:resource="#Alex Garland"/>
+  <hasDirector rdf:resource="#John Waters"/>
+  <hasProducer rdf:resource="#Rachel Talalay"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Her</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the not so distant future, Theodore, a lonely writer purchases a newly developed operating system designed to meet the user's every needs. To Theordore's surprise, a romantic relationship develops between him and his operating system. This unconventional love story blends science fiction and romance in a sweet tale that explores the nature of love and the ways that technology isolates and connects us all.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ex Machina leans heavier on ideas than effects, but it's still a visually polished piece of work -- and an uncommonly engaging sci-fi feature.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#DNA Films">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Joaquin Phoenix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Scarlett Johansson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Amy Adams">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rooney Mara">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Olivia Wilde">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Chris Pratt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Matt Letscher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Portia Doubleday">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#John Waters">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Rachel Talalay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#How to Train Your Dragon 2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#DNA Films"/>
+  <hasActor rdf:resource="#Jay Baruchel"/>
+  <hasActor rdf:resource="# Cate Blanchett"/>
+  <hasActor rdf:resource="# Gerard Butler"/>
+  <hasActor rdf:resource="# Craig Ferguson"/>
+  <hasActor rdf:resource="# America Ferrera"/>
+  <hasActor rdf:resource="# Jonah Hill"/>
+  <hasActor rdf:resource="# Christopher Mintz-Plasse"/>
+  <hasActor rdf:resource="# T.J. Miller"/>
+  <hasActor rdf:resource="# Kristen Wiig"/>
+  <hasActor rdf:resource="# Djimon Hounsou"/>
+  <hasActor rdf:resource="# Kit Harington"/>
+  <hasWriter rdf:resource="#Alex Garland"/>
+  <hasDirector rdf:resource="#Spike Jonze"/>
+  <hasProducer rdf:resource="#Megan Ellison"/>
+  <hasProducer rdf:resource="# Spike Jonze"/>
+  <hasProducer rdf:resource="# Vincent Landay"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to Train Your Dragon 2</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The thrilling second chapter of the epic How To Train Your Dragon trilogy brings back the fantastical world of Hiccup and Toothless five years later. While Astrid, Snotlout and the rest of the gang are challenging each other to dragon races (the island's new favorite contact sport), the now inseparable pair journey through the skies, charting unmapped territories and exploring new worlds. When one of their adventures leads to the discovery of a secret ice cave that is home to hundreds of new wild dragons and the mysterious Dragon Rider, the two friends find themselves at the center of a battle to protect the peace.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ex Machina leans heavier on ideas than effects, but it's still a visually polished piece of work -- and an uncommonly engaging sci-fi feature.</movie_concensus>
+</Movie>
+
+<Actor rdf:about="#Jay Baruchel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Cate Blanchett">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Gerard Butler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Producer"/>
+</Actor>
+
+<Actor rdf:about="# Craig Ferguson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# America Ferrera">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jonah Hill">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Christopher Mintz-Plasse">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# T.J. Miller">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kristen Wiig">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Djimon Hounsou">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kit Harington">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Spike Jonze">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Director>
+
+<Producer rdf:about="#Megan Ellison">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Spike Jonze">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Vincent Landay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Iris">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#South Korea"/>
+  <hasProductionCO rdf:resource="#Annapurna Pictures"/>
+  <hasActor rdf:resource="#Lee Byung-hun"/>
+  <hasActor rdf:resource="# Kim Tae-hee"/>
+  <hasActor rdf:resource="# Jeong Jun-ho"/>
+  <hasActor rdf:resource="# Kim Young-chul"/>
+  <hasActor rdf:resource="# Kim Seung-woo"/>
+  <hasActor rdf:resource="# Kim So-yeon"/>
+  <hasActor rdf:resource="# Yun Ju-sang"/>
+  <hasActor rdf:resource="# Lee Jeong-kil"/>
+  <hasWriter rdf:resource="#Spike Jonze"/>
+  <hasDirector rdf:resource="#Dean DeBlois"/>
+  <hasProducer rdf:resource="#Bonnie Arnold"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iris</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True story of the lifelong romance between novelist Iris Murdoch and her husband John Bayley, from their student days through her battle with Alzheimer's disease.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet, soulful, and smart, Spike Jonze's Her uses its just-barely-sci-fi scenario to impart wryly funny wisdom about the state of modern human relationships.</movie_concensus>
+</Movie>
+
+<Contry rdf:about="#South Korea">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Production_CO rdf:about="#Annapurna Pictures">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Lee Byung-hun">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kim Tae-hee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jeong Jun-ho">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kim Young-chul">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kim Seung-woo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kim So-yeon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Yun Ju-sang">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Lee Jeong-kil">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Dean DeBlois">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Director>
+
+<Producer rdf:about="#Bonnie Arnold">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#La Bamba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Annapurna Pictures"/>
+  <hasActor rdf:resource="#Lou Diamond Phillips"/>
+  <hasActor rdf:resource="# Esai Morales"/>
+  <hasActor rdf:resource="# Rosanna DeSoto"/>
+  <hasActor rdf:resource="# Elizabeth Pe√±a"/>
+  <hasActor rdf:resource="# Danielle von Zerneck"/>
+  <hasActor rdf:resource="# Joe Pantoliano"/>
+  <hasActor rdf:resource="# Rick Dees"/>
+  <hasActor rdf:resource="# Marshall Crenshaw"/>
+  <hasActor rdf:resource="# Howard Huntsberry"/>
+  <hasActor rdf:resource="# Brian Setzer"/>
+  <hasWriter rdf:resource="#Spike Jonze"/>
+  <hasDirector rdf:resource="#James Ivory"/>
+  <hasProducer rdf:resource="#Ismail Merchant"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Bamba</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6500000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biographical story of the rise from nowhere of singer Ritchie Valens whose life was cut short by a plane crash.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet, soulful, and smart, Spike Jonze's Her uses its just-barely-sci-fi scenario to impart wryly funny wisdom about the state of modern human relationships.</movie_concensus>
+</Movie>
+
+<Actor rdf:about="#Lou Diamond Phillips">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Esai Morales">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rosanna DeSoto">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Elizabeth Pe√±a">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Danielle von Zerneck">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Joe Pantoliano">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rick Dees">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Marshall Crenshaw">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Howard Huntsberry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Brian Setzer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#James Ivory">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Ismail Merchant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Monty Python and the Holy Grail">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasProductionCO rdf:resource="#Annapurna Pictures"/>
+  <hasActor rdf:resource="#Graham Chapman"/>
+  <hasActor rdf:resource="# John Cleese"/>
+  <hasActor rdf:resource="# Eric Idle"/>
+  <hasActor rdf:resource="# Terry Gilliam"/>
+  <hasActor rdf:resource="# Terry Jones"/>
+  <hasActor rdf:resource="# Michael Palin"/>
+  <hasActor rdf:resource="# Connie Booth"/>
+  <hasActor rdf:resource="# Carol Cleveland"/>
+  <hasActor rdf:resource="# Neil Innes"/>
+  <hasWriter rdf:resource="#Spike Jonze"/>
+  <hasDirector rdf:resource="#Martin Scorsese"/>
+  <hasProducer rdf:resource="#Graham King"/>
+  <hasProducer rdf:resource="# Tim Headington"/>
+  <hasProducer rdf:resource="# Martin Scorsese"/>
+  <hasProducer rdf:resource="# Johnny Depp"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monty Python and the Holy Grail</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">King Arthur, accompanied by his squire, recruits his Knights of the Round Table, including Sir Bedevere the Wise, Sir Lancelot the Brave, Sir Robin the Not-Quite-So-Brave-As-Sir-Lancelot and Sir Galahad the Pure. On the way, Arthur battles the Black Knight who, despite having had all his limbs chopped off, insists he can still fight. They reach Camelot, but Arthur decides not  to enter, as "it is a silly place".</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet, soulful, and smart, Spike Jonze's Her uses its just-barely-sci-fi scenario to impart wryly funny wisdom about the state of modern human relationships.</movie_concensus>
+</Movie>
+
+<Actor rdf:about="#Graham Chapman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Actor>
+
+<Actor rdf:about="# John Cleese">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Actor>
+
+<Actor rdf:about="# Eric Idle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Actor>
+
+<Actor rdf:about="# Terry Gilliam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Actor>
+
+<Actor rdf:about="# Terry Jones">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Director"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Actor>
+
+<Actor rdf:about="# Connie Booth">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Carol Cleveland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Neil Innes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Martin Scorsese">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Graham King">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Tim Headington">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Martin Scorsese">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Johnny Depp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Nightcrawler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#DreamWorks Animation"/>
+  <hasProductionCO rdf:resource="# Mad Hatter Entertainment"/>
+  <hasActor rdf:resource="#Jake Gyllenhaal"/>
+  <hasActor rdf:resource="# Rene Russo"/>
+  <hasActor rdf:resource="# Riz Ahmed"/>
+  <hasActor rdf:resource="# Bill Paxton"/>
+  <hasActor rdf:resource="# Kevin Rahm"/>
+  <hasActor rdf:resource="# Michael Hyatt"/>
+  <hasActor rdf:resource="# Ann Cusack"/>
+  <hasActor rdf:resource="# Marco Rodriguez"/>
+  <hasActor rdf:resource="# Michael Papajohn"/>
+  <hasActor rdf:resource="# Kent Shocknek"/>
+  <hasActor rdf:resource="# James Huang"/>
+  <hasWriter rdf:resource="#Dean DeBlois"/>
+  <hasDirector rdf:resource="#Clint Eastwood"/>
+  <hasProducer rdf:resource="#Clint Eastwood"/>
+  <hasProducer rdf:resource="# Lori McCreary"/>
+  <hasProducer rdf:resource="# Robert Lorenz"/>
+  <hasProducer rdf:resource="# Mace Neufeld"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nightcrawler</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8500000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When Lou Bloom, desperate for work, muscles into the world of L.A. crime journalism, he blurs the line between observer and participant to become the star of his own story. Aiding him in his effort is Nina, a TV-news veteran.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exciting, emotionally resonant, and beautifully animated, How to Train Your Dragon 2 builds on its predecessor's successes just the way a sequel should.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#DreamWorks Animation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Mad Hatter Entertainment">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Jake Gyllenhaal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rene Russo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Riz Ahmed">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Bill Paxton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kevin Rahm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Michael Hyatt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ann Cusack">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Marco Rodriguez">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Michael Papajohn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kent Shocknek">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# James Huang">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Clint Eastwood">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Producer"/>
+</Director>
+
+<Producer rdf:about="# Lori McCreary">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Robert Lorenz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Mace Neufeld">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#ParaNorman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#DreamWorks Animation"/>
+  <hasProductionCO rdf:resource="# Mad Hatter Entertainment"/>
+  <hasActor rdf:resource="#Kodi Smit-McPhee"/>
+  <hasActor rdf:resource="# Tucker Albrizzi"/>
+  <hasActor rdf:resource="# Anna Kendrick"/>
+  <hasActor rdf:resource="# Casey Affleck"/>
+  <hasActor rdf:resource="# Christopher Mintz-Plasse"/>
+  <hasActor rdf:resource="# Leslie Mann"/>
+  <hasActor rdf:resource="# Jeff Garlin"/>
+  <hasActor rdf:resource="# Elaine Stritch"/>
+  <hasActor rdf:resource="# Bernard Hill"/>
+  <hasActor rdf:resource="# Jodelle Ferland"/>
+  <hasActor rdf:resource="# Tempestt Bledsoe"/>
+  <hasActor rdf:resource="# Alex Borstein"/>
+  <hasActor rdf:resource="# John Goodman"/>
+  <hasWriter rdf:resource="#Dean DeBlois"/>
+  <hasDirector rdf:resource="#Albert Maysles"/>
+  <hasProducer rdf:resource="#Jennifer Ash Rudick"/>
+  <hasProducer rdf:resource="# Lara Coxson"/>
+  <hasProducer rdf:resource="# Rebekah Maysles"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParaNorman</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the town of Blithe Hollow, Norman Babcock is a boy who can speak to the dead, but no one besides his eccentric new friend, Neil, believes his ability is real. One day, Norman's estranged eccentric uncle tells him of an important annual ritual he must take up to protect the town from an curse cast by a witch it condemned centuries ago. Eventually, Norman decides to cooperate, but things don't go according to plan. Now, a magic storm of the witch threatens Blithe Hollow as the accursed dead rise. Together with unexpected new companions, Norman struggles to save his town, only to discover the horrific truth of the curse. With that insight, Norman must resolve the crisis for good as only he can.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exciting, emotionally resonant, and beautifully animated, How to Train Your Dragon 2 builds on its predecessor's successes just the way a sequel should.</movie_concensus>
+</Movie>
+
+<Actor rdf:about="#Kodi Smit-McPhee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Tucker Albrizzi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Anna Kendrick">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Casey Affleck">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Leslie Mann">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jeff Garlin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Elaine Stritch">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Bernard Hill">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jodelle Ferland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Tempestt Bledsoe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Alex Borstein">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Goodman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Albert Maysles">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Jennifer Ash Rudick">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Lara Coxson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Rebekah Maysles">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Playing for Keeps">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Imagica Corp."/>
+  <hasProductionCO rdf:resource="# Film 4"/>
+  <hasProductionCO rdf:resource="# Sumitomo Corporation"/>
+  <hasProductionCO rdf:resource="# Merchant Ivory Productions"/>
+  <hasActor rdf:resource="#Gerard Butler"/>
+  <hasActor rdf:resource="# Jessica Biel"/>
+  <hasActor rdf:resource="# Catherine Zeta-Jones"/>
+  <hasActor rdf:resource="# Dennis Quaid"/>
+  <hasActor rdf:resource="# Uma Thurman"/>
+  <hasActor rdf:resource="# Judy Greer"/>
+  <hasActor rdf:resource="# Noah Lomax"/>
+  <hasActor rdf:resource="# James Tupper"/>
+  <hasActor rdf:resource="# Abella Wyss"/>
+  <hasActor rdf:resource="# Grant Goodman"/>
+  <hasWriter rdf:resource="#Ruth Prawer Jhabvala"/>
+  <hasDirector rdf:resource="#Luis Valdez"/>
+  <hasProducer rdf:resource="#Jennifer Ash Rudick"/>
+  <hasProducer rdf:resource="# Lara Coxson"/>
+  <hasProducer rdf:resource="# Rebekah Maysles"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Playing for Keeps</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A former sports star who's fallen on hard times starts coaching his son's soccer team in an attempt to get his life together.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A superbly-mounted adaptation of E.M. Forster's tale of British class tension, with exceptional performances all round, Howard's End ranks among the best of Merchant-Ivory's work.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Imagica Corp.">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Film 4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Sumitomo Corporation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Merchant Ivory Productions">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Gerard Butler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jessica Biel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Catherine Zeta-Jones">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Dennis Quaid">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Uma Thurman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Judy Greer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Noah Lomax">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# James Tupper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Abella Wyss">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Grant Goodman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Ruth Prawer Jhabvala">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Luis Valdez">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Movie rdf:about="#Psycho">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#India"/>
+  <hasProductionCO rdf:resource="#GK Films"/>
+  <hasActor rdf:resource="#Udhayanidhi Stalin"/>
+  <hasActor rdf:resource="# Aditi Rao Hydari"/>
+  <hasActor rdf:resource="# Nithya Menon"/>
+  <hasActor rdf:resource="# Ram"/>
+  <hasActor rdf:resource="# Rajkumar Pitchumani"/>
+  <hasWriter rdf:resource="#John Logan"/>
+  <hasDirector rdf:resource="#Terry Gilliam"/>
+  <hasDirector rdf:resource="# Terry Jones"/>
+  <hasProducer rdf:resource="#Mark Forstater"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psycho</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">806948</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother. The place seems quirky, but fine‚Ä¶ until Marion decides to take a shower.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hugo is an extravagant, elegant fantasy with an innocence lacking in many modern kids' movies, and one that emanates an unabashed love for the magic of cinema.</movie_concensus>
+</Movie>
+
+<Contry rdf:about="#India">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Contry>
+
+<Production_CO rdf:about="#GK Films">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Udhayanidhi Stalin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Aditi Rao Hydari">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Nithya Menon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ram">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Rajkumar Pitchumani">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#John Logan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Terry Gilliam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Mark Forstater">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Rango">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Malpaso Company"/>
+  <hasProductionCO rdf:resource="# Mace Neufeld Productions"/>
+  <hasProductionCO rdf:resource="# Revelations Entertainment"/>
+  <hasActor rdf:resource="#Johnny Depp"/>
+  <hasActor rdf:resource="# Isla Fisher"/>
+  <hasActor rdf:resource="# Abigail Breslin"/>
+  <hasActor rdf:resource="# Ned Beatty"/>
+  <hasActor rdf:resource="# Alfred Molina"/>
+  <hasActor rdf:resource="# Bill Nighy"/>
+  <hasActor rdf:resource="# Stephen Root"/>
+  <hasActor rdf:resource="# Harry Dean Stanton"/>
+  <hasActor rdf:resource="# Timothy Olyphant"/>
+  <hasActor rdf:resource="# Ray Winstone"/>
+  <hasWriter rdf:resource="#Anthony Peckham"/>
+  <hasDirector rdf:resource="#Dan Gilroy"/>
+  <hasProducer rdf:resource="#Michel Litvak"/>
+  <hasProducer rdf:resource="# Jake Gyllenhaal"/>
+  <hasProducer rdf:resource="# David Lancaster"/>
+  <hasProducer rdf:resource="# Jennifer Fox"/>
+  <hasProducer rdf:resource="# Tony Gilroy"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rango</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">135000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When Rango, a lost family pet, accidentally winds up in the gritty, gun-slinging town of Dirt, the less-than-courageous lizard suddenly finds he stands out. Welcomed as the last hope the town has been waiting for, new Sheriff Rango is forced to play his new role to the hilt.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delivered with typically stately precision by director Clint Eastwood, Invictus may not be rousing enough for some viewers, but Matt Damon and Morgan Freeman inhabit their real-life characters with admirable conviction.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Malpaso Company">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Mace Neufeld Productions">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Revelations Entertainment">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Johnny Depp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Isla Fisher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Abigail Breslin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ned Beatty">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Alfred Molina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Stephen Root">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Harry Dean Stanton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Timothy Olyphant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ray Winstone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Anthony Peckham">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Dan Gilroy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Writer"/>
+</Director>
+
+<Producer rdf:about="#Michel Litvak">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Jake Gyllenhaal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# David Lancaster">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Jennifer Fox">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Tony Gilroy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Rebecca">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United Kingdom"/>
+  <hasProductionCO rdf:resource="#unknown"/>
+  <hasActor rdf:resource="#Lily James"/>
+  <hasActor rdf:resource="# Armie Hammer"/>
+  <hasActor rdf:resource="# Kristin Scott Thomas"/>
+  <hasActor rdf:resource="# Keeley Hawes"/>
+  <hasActor rdf:resource="# Ann Dowd"/>
+  <hasActor rdf:resource="# Sam Riley"/>
+  <hasActor rdf:resource="# Tom Goodman-Hill"/>
+  <hasActor rdf:resource="# Mark Lewis Jones"/>
+  <hasActor rdf:resource="# John Hollingworth"/>
+  <hasActor rdf:resource="# Bill Paterson"/>
+  <hasWriter rdf:resource="#Chris Butler"/>
+  <hasWriter rdf:resource="# Sam Fell"/>
+  <hasDirector rdf:resource="#Arianne Sutner"/>
+  <hasDirector rdf:resource="# Travis Knight"/>
+  <hasProducer rdf:resource="#Michel Litvak"/>
+  <hasProducer rdf:resource="# Jake Gyllenhaal"/>
+  <hasProducer rdf:resource="# David Lancaster"/>
+  <hasProducer rdf:resource="# Jennifer Fox"/>
+  <hasProducer rdf:resource="# Tony Gilroy"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rebecca</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1288000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A self-conscious bride is tormented by the memory of her husband's dead first wife.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A small, insightful feature with a deceptively thoughtful thesis, Iris adds a bittersweet postscript to director Albert Maysles' filmography.</movie_concensus>
+</Movie>
+
+<Actor rdf:about="#Lily James">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Armie Hammer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Keeley Hawes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ann Dowd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sam Riley">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Tom Goodman-Hill">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Mark Lewis Jones">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Hollingworth">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Bill Paterson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Writer rdf:about="#Chris Butler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Writer rdf:about="# Sam Fell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Writer>
+
+<Director rdf:about="#Arianne Sutner">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Director rdf:about="# Travis Knight">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Movie rdf:about="#Rocky">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Columbia Pictures Corporation"/>
+  <hasProductionCO rdf:resource="# New Visions Pictures"/>
+  <hasActor rdf:resource="#Sylvester Stallone"/>
+  <hasActor rdf:resource="# Talia Shire"/>
+  <hasActor rdf:resource="# Burt Young"/>
+  <hasActor rdf:resource="# Carl Weathers"/>
+  <hasActor rdf:resource="# Burgess Meredith"/>
+  <hasActor rdf:resource="# Thayer David"/>
+  <hasActor rdf:resource="# Joe Spinell"/>
+  <hasActor rdf:resource="# Jimmy Gambina"/>
+  <hasActor rdf:resource="# Bill Baldwin"/>
+  <hasWriter rdf:resource="#Chris Butler"/>
+  <hasWriter rdf:resource="# Sam Fell"/>
+  <hasDirector rdf:resource="#Arianne Sutner"/>
+  <hasDirector rdf:resource="# Travis Knight"/>
+  <hasProducer rdf:resource="#Michel Litvak"/>
+  <hasProducer rdf:resource="# Jake Gyllenhaal"/>
+  <hasProducer rdf:resource="# David Lancaster"/>
+  <hasProducer rdf:resource="# Jennifer Fox"/>
+  <hasProducer rdf:resource="# Tony Gilroy"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rocky</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When world heavyweight boxing champion, Apollo Creed wants to give an unknown fighter a shot at the title as a publicity stunt, his handlers choose palooka Rocky Balboa, an uneducated collector for a Philadelphia loan shark. Rocky teams up with trainer  Mickey Goldmill to make the most of this once in a lifetime break.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevated by a perceptive performance by a perfectly cast Lou Diamond Phillips, La Bamba distills its subject's creative energy -- and reflects his music's enduring appeal.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Columbia Pictures Corporation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# New Visions Pictures">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Sylvester Stallone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Talia Shire">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Burt Young">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Carl Weathers">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Burgess Meredith">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Thayer David">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Joe Spinell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jimmy Gambina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Bill Baldwin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Movie rdf:about="#Rosemary's Baby">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Michael White Productions"/>
+  <hasProductionCO rdf:resource="# Python (Monty) Pictures Limited"/>
+  <hasProductionCO rdf:resource="# National Film Trustee Company"/>
+  <hasActor rdf:resource="#Mia Farrow"/>
+  <hasActor rdf:resource="# John Cassavetes"/>
+  <hasActor rdf:resource="# Ruth Gordon"/>
+  <hasActor rdf:resource="# Sidney Blackmer"/>
+  <hasActor rdf:resource="# Maurice Evans"/>
+  <hasActor rdf:resource="# Ralph Bellamy"/>
+  <hasActor rdf:resource="# Patsy Kelly"/>
+  <hasActor rdf:resource="# Elisha Cook Jr."/>
+  <hasActor rdf:resource="# Emmaline Henry"/>
+  <hasActor rdf:resource="# Charles Grodin"/>
+  <hasWriter rdf:resource="#Graham Chapman"/>
+  <hasWriter rdf:resource="# John Cleese"/>
+  <hasWriter rdf:resource="# Eric Idle"/>
+  <hasWriter rdf:resource="# Terry Gilliam"/>
+  <hasWriter rdf:resource="# Terry Jones"/>
+  <hasWriter rdf:resource="# Michael Palin"/>
+  <hasDirector rdf:resource="#Gabriele Muccino"/>
+  <hasProducer rdf:resource="#Jonathan Mostow"/>
+  <hasProducer rdf:resource="# Kevin Misher"/>
+  <hasProducer rdf:resource="# Gerard Butler"/>
+  <hasProducer rdf:resource="# Alan Siegel"/>
+  <hasProducer rdf:resource="# Heidi Jo Markel"/>
+  <hasProducer rdf:resource="# John Thompson"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosemary's Baby</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3200000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A young couple moves into an infamous New York apartment building to start a family. Things become frightening as Rosemary begins to suspect her unborn baby isn't safe around their strange neighbors.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cult classic as gut-bustingly hilarious as it is blithely ridiculous, Monty Python and the Holy Grail has lost none of its exceedingly silly charm.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Michael White Productions">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# Python (Monty) Pictures Limited">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Production_CO rdf:about="# National Film Trustee Company">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Mia Farrow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Cassavetes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ruth Gordon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sidney Blackmer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Maurice Evans">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ralph Bellamy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Patsy Kelly">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Elisha Cook Jr.">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Emmaline Henry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Charles Grodin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Gabriele Muccino">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Director>
+
+<Producer rdf:about="#Jonathan Mostow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Kevin Misher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Alan Siegel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# Heidi Jo Markel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Producer rdf:about="# John Thompson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Producer>
+
+<Movie rdf:about="#Silver Linings Playbook">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Bold Films"/>
+  <hasActor rdf:resource="#Bradley Cooper"/>
+  <hasActor rdf:resource="# Jennifer Lawrence"/>
+  <hasActor rdf:resource="# Robert De Niro"/>
+  <hasActor rdf:resource="# Jacki Weaver"/>
+  <hasActor rdf:resource="# Chris Tucker"/>
+  <hasActor rdf:resource="# Anupam Kher"/>
+  <hasActor rdf:resource="# John Ortiz"/>
+  <hasActor rdf:resource="# Shea Whigham"/>
+  <hasActor rdf:resource="# Julia Stiles"/>
+  <hasActor rdf:resource="# Paul Herman"/>
+  <hasWriter rdf:resource="#Dan Gilroy"/>
+  <hasDirector rdf:resource="#Alfred Hitchcock"/>
+  <hasProducer rdf:resource="#Alfred Hitchcock"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver Linings Playbook</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After spending eight months in a mental institution, a former teacher moves back in with his parents and tries to reconcile with his ex-wife.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restless, visually sleek, and powered by a lithe star performance from Jake Gyllenhaal, Nightcrawler offers dark, thought-provoking thrills.</movie_concensus>
+</Movie>
+
+<Production_CO rdf:about="#Bold Films">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Production_CO>
+
+<Actor rdf:about="#Bradley Cooper">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jennifer Lawrence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jacki Weaver">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Chris Tucker">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Anupam Kher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Ortiz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Shea Whigham">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Julia Stiles">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Paul Herman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Director rdf:about="#Alfred Hitchcock">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Producer"/>
+</Director>
+
+<Movie rdf:about="#Snowpiercer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#South Korea"/>
+  <hasContry rdf:resource="# Czech Republic"/>
+  <hasProductionCO rdf:resource="#Laika"/>
+  <hasActor rdf:resource="#Chris Evans"/>
+  <hasActor rdf:resource="# Song Kang-ho"/>
+  <hasActor rdf:resource="# Ed Harris"/>
+  <hasActor rdf:resource="# John Hurt"/>
+  <hasActor rdf:resource="# Tilda Swinton"/>
+  <hasActor rdf:resource="# Jamie Bell"/>
+  <hasActor rdf:resource="# Octavia Spencer"/>
+  <hasActor rdf:resource="# Ewen Bremner"/>
+  <hasActor rdf:resource="# Alison Pill"/>
+  <hasActor rdf:resource="# Adnan Haskovic"/>
+  <hasActor rdf:resource="# Vlad Ivanov"/>
+  <hasActor rdf:resource="# Ko A-sung"/>
+  <hasActor rdf:resource="# Luke Pasqualino"/>
+  <hasWriter rdf:resource="#Chris Butler"/>
+  <hasDirector rdf:resource="#Alfred Hitchcock"/>
+  <hasProducer rdf:resource="#Alfred Hitchcock"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snowpiercer</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39200000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In a future where a failed global-warming experiment kills off most life on the planet, a class system evolves aboard the Snowpiercer, a train that travels around the globe via a perpetual-motion engine.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beautifully animated and solidly scripted, ParaNorman will entertain (and frighten) older children while providing surprisingly thoughtful fare for their parents.</movie_concensus>
+</Movie>
+
+<Actor rdf:about="#Chris Evans">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Song Kang-ho">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ed Harris">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Hurt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Tilda Swinton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jamie Bell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Octavia Spencer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ewen Bremner">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Alison Pill">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Adnan Haskovic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Vlad Ivanov">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ko A-sung">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Luke Pasqualino">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Movie rdf:about="#Soul Surfer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasLanguage rdf:resource="#en"/>
+  <hasContry rdf:resource="#United States"/>
+  <hasProductionCO rdf:resource="#Laika"/>
+  <hasActor rdf:resource="#AnnaSophia Robb"/>
+  <hasActor rdf:resource="# Helen Hunt"/>
+  <hasActor rdf:resource="# Dennis Quaid"/>
+  <hasActor rdf:resource="# Carrie Underwood"/>
+  <hasActor rdf:resource="# Kevin Sorbo"/>
+  <hasActor rdf:resource="# Ross Thomas"/>
+  <hasActor rdf:resource="# Chris Brochu"/>
+  <hasActor rdf:resource="# Lorraine Nicholson"/>
+  <hasActor rdf:resource="# Jeremy Sumpter"/>
+  <hasActor rdf:resource="# Sonya Balmores"/>
+  <hasActor rdf:resource="# Craig T. Nelson"/>
+  <hasActor rdf:resource="# Mark Kubr"/>
+  <hasActor rdf:resource="# Kim Morgan Greene"/>
+  <hasActor rdf:resource="# Titus Kinimaka"/>
+  <hasActor rdf:resource="# Branscombe Richmond"/>
+  <hasActor rdf:resource="# Sonya Balmores Chung"/>
+  <hasActor rdf:resource="# Kimberly-Rose Wolter"/>
+  <hasActor rdf:resource="# John Philbin"/>
+  <hasActor rdf:resource="# David Chokachi"/>
+  <hasActor rdf:resource="# Wesley Mann"/>
+  <hasWriter rdf:resource="#Chris Butler"/>
+  <hasDirector rdf:resource="#Alfred Hitchcock"/>
+  <hasProducer rdf:resource="#Alfred Hitchcock"/>
+  <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soul Surfer</movie_title>
+  <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18000000</movie_budget>
+  <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</movie_public_score>
+  <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</movie_critic_score>
+  <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soul Surfer is the inspiring true story of teen surfer Bethany Hamilton. Bethany lost her left arm in a shark attack and courageously overcame all odds to become a champion again, through her sheer determination and unwavering faith.Bethany (AnnaSophia Robb) was born to surf. A natural talent who took to the waves at a young age, she was leading an idyllic life on Kauai, participating in national surf competitions with her best friend Alana (Lorraine Nicholson), when everything changed. On Halloween morning, a 14-foot tiger shark came out of nowhere and seemed to shatter all her dreams.Soul Surfer reveals Bethany's fight to recover from her ordeal and how she grappled with the question of her future. Strengthened by the love of her parents, Tom (Dennis Quaid) and Cheri (Helen Hunt), and supported by her youth group leader Sara (Carrie Underwood), Bethany refuses to give in or give up, and begins a bold return to the water.</movie_overview>
+  <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beautifully animated and solidly scripted, ParaNorman will entertain (and frighten) older children while providing surprisingly thoughtful fare for their parents.</movie_concensus>
+</Movie>
+
+<Actor rdf:about="#AnnaSophia Robb">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Helen Hunt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Carrie Underwood">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kevin Sorbo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Ross Thomas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Chris Brochu">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Lorraine Nicholson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Jeremy Sumpter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sonya Balmores">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Craig T. Nelson">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Mark Kubr">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kim Morgan Greene">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Titus Kinimaka">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Branscombe Richmond">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Sonya Balmores Chung">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Kimberly-Rose Wolter">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# John Philbin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# David Chokachi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
+
+<Actor rdf:about="# Wesley Mann">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Actor>
 
 
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasOverview -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasOverview">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isOverView"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasProducer -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasProducer">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isProducer"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasProductionCO -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasProductionCO">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isProductionCO"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasPublicScore -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasPublicScore">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isPublicScore"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasTitle -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasTitle">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isTitle"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasWriter -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#hasWriter">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isWriter"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isActor -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isActor"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isBudget -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isBudget">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isConcensus -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isConcensus"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isContry -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isContry"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isCriticScore -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isCriticScore"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isDirector -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isDirector"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isLanguage -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isLanguage">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isOverView -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isOverView"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isProducer -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isProducer"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isProductionCO -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isProductionCO"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isPublicScore -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isPublicScore"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isTitle -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isTitle">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isWriter -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#isWriter">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_budget -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_budget">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_concensus -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_concensus">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_critic_score -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_critic_score">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_language -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_language">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_overview -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_overview">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_public_score -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_public_score">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_title -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#movie_title">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Actor -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Actor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Crew"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Contry -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Contry"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Crew -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Crew"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Critic_Score -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Critic_Score"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Director -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Director">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Crew"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Language -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Language"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Movie -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Movie"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#People_Score -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#People_Score"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Producer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Producer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Crew"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Production_CO -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Production_CO"/>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Writer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Writer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Crew"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Chris_Weitz -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Chris_Weitz">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Director"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#France -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#France">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Contry"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Germany -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Germany">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Contry"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Jane_Rosenthal -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Jane_Rosenthal">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Producer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Movie_About_a_Boy -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Movie_About_a_Boy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Movie"/>
-        <hasActor rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Nicholas_Hoult"/>
-        <hasContry rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#France"/>
-        <hasContry rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Germany"/>
-        <hasContry rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#United_Kingdom"/>
-        <hasContry rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#United_States"/>
-        <hasLanguage rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#en"/>
-        <hasProducer rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Jane_Rosenthal"/>
-        <hasProductionCO rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Tribeca_Productions"/>
-        <hasWriter rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Peter_Baynham"/>
-        <hasWriter rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Sarah_Smith"/>
-        <movie_budget rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27000000</movie_budget>
-        <movie_concensus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">About a Boy benefits tremendously from Hugh Grant&apos;s layered performance, as well as a funny, moving story that tugs at the heartstrings without tilting into treacle.</movie_concensus>
-        <movie_critic_score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">93</movie_critic_score>
-        <movie_overview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Will Freeman is a hip Londoner who one day realizes that his friends are all involved with the responsibilities of married life and that leaves him alone in the cold. Passing himself off as a single father, he starts to meet a string of single mums, confident in his ability to leave them behind when they start to ask for a commitment. But Will&apos;s hope of a continued bachelorhood is interrupted when he meets 12-year old Marcus, in many ways his complete opposite.</movie_overview>
-        <movie_public_score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">55</movie_public_score>
-        <movie_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">About a Boy</movie_title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Nicholas_Hoult -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Nicholas_Hoult">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Actor"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Peter_Baynham -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Peter_Baynham">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Writer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Sarah_Smith -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Sarah_Smith">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Writer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Tribeca_Productions -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Tribeca_Productions">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Production_CO"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#United_Kingdom -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#United_Kingdom">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Contry"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#United_States -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#United_States">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Contry"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#en -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#en">
-        <rdf:type rdf:resource="http://www.semanticweb.org/manuelgutierrez/ontologies/2023/3/project#Language"/>
-    </owl:NamedIndividual>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
