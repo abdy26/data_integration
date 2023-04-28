@@ -12,7 +12,7 @@ from rdflib.plugins.sparql import prepareQuery
 
 onto_path.append("./data_project.owl")
 onto = get_ontology('data_project.owl').load()
-
+print(onto)
 
 def get_basic_Info():
     #sync_reasoner(onto)
@@ -48,11 +48,19 @@ def get_Individuals_based_on_class(str_class):
     # Loop over the instances and print their names
     for instance in instances:
         print(str_class," ",instance.name)
-        
-        
 
+
+
+def second_query():
+    first_query = list(default_world.sparql("""
+               SELECT ?x WHERE
+               {?x owl:Class rdf:about='#Movie'}
+        """))
+    print(first_query)
     
 if __name__ == '__main__':
     #get_basic_Info()
-    get_Individuals_based_on_class("dtrfyguhi")
+    #get_Individuals_based_on_class("dtrfyguhi")
+    second_query()
+
 
