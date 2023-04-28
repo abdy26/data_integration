@@ -9,24 +9,7 @@ Created on Wed Apr 26 12:17:19 2023
 from owlready2 import *
 import pandas as pd
 
-
-onto_path.append("./data_project.owl")
 template_ontology = get_ontology('data_project.owl').load()
-
-
-def getInstances():
-    print("Ontology IRI:", template_ontology.base_iri)
-    print(template_ontology.Movie)
-    
-    #this is how to get data from there
-    for individual in template_ontology.individuals():
-        print(individual.name)
-        
-    print("--------------------------------------------------------------------------------------")
-    for indiv in template_ontology.Movie.instances():
-        print(indiv.name)
-    print("--------------------------------------------------------------------------------------")
-
 
 def printRowData():
     file_path = 'book4.xlsx'
@@ -35,6 +18,10 @@ def printRowData():
     print(first_two_rows_loc)
     
     #get the title
+    
+    #get the language 
+    en_instance = template_ontology.Language('en')
+    ko_instance = template_ontology.Language('ko')
     
     for row in range(29):
         rows_loc = df.loc[row]
@@ -65,6 +52,69 @@ def printRowData():
         movie_instances.movie_overview.append(twelve_element)
         movie_instances.movie_concensus.append(thirteen_element)
     
+        #instance add 
+        movie_instances.hasLanguage.append(en_instance)
+        
+
+        #make individuals contry
+        list_of_contrys = fourth_element.split(',')
+        for contry in list_of_contrys: 
+            print("addint contry", contry)
+            contry_instance = template_ontology.Contry(contry)
+            movie_instances.hasContry.append(contry_instance)
+            template_ontology.save(file="data_project.owl")
+        
+        #make individuals contry
+        list_of_production_companies = fifth_element.split(',')
+        for production_co in list_of_production_companies: 
+            print("addint production company", production_co)
+            production_co_instance = template_ontology.Production_CO(production_co)
+            #adds hasProductionCO to the movie instance 
+            movie_instances.hasProductionCO.append(production_co_instance)
+            template_ontology.save(file="data_project.owl")
+        
+        
+        #make individuals actor
+        list_of_actors = six_element.split(',')
+        for actor in list_of_actors: 
+            print("added actor",actor)
+            actor_instance = template_ontology.Actor(actor)
+            #add has actors to a movie
+            movie_instances.hasActor.append(actor_instance)
+            template_ontology.save(file="data_project.owl")
+            
+            
+        #make individuals writer
+        list_of_writers = seven_element.split(',')
+        for writer in list_of_writers: 
+            print("added actor",writer)
+            writer_instance = template_ontology.Writer(writer)
+            #add has actors to a movie
+            movie_instances.hasWriter.append(writer_instance)
+            template_ontology.save(file="data_project.owl")
+        
+        
+        #make individuals Directors
+        list_of_Directos = eight_element.split(',')
+        for director in list_of_Directos: 
+            print("added actor", director)
+            director_instance = template_ontology.Director(director)
+            #add has director to a movie
+            movie_instances.hasDirector.append(director_instance)
+            template_ontology.save(file="data_project.owl")
+            
+        
+        #make individuals Directors
+        list_of_producer = nine_element.split(',')
+        for producer in list_of_producer: 
+            print("added actor", director)
+            producer_instance = template_ontology.Producer(producer)
+            #add has director to a movie
+            movie_instances.hasProducer.append(producer_instance )
+            template_ontology.save(file="data_project.owl")
+
+        
+                       
         template_ontology.save(file="mdata_project.owl")
     #for ind in first_two_rows_loc:
     #    print(ind)
