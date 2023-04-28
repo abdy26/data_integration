@@ -51,16 +51,22 @@ def get_Individuals_based_on_class(str_class):
 
 
 
-def second_query():
+def first_query():
+    #this is going to get all the movies with a public_score and a critic_score above 70
     first_query = list(default_world.sparql("""
-               SELECT ?x WHERE
-               {?x owl:Class rdf:about='#Movie'}
+            SELECT ?movie
+            WHERE {
+              ?movie rdf:type data_project:Movie .
+              ?movie data_project:movie_public_score ?public_score .
+              ?movie data_project:movie_critic_score ?people_score .
+              FILTER (?public_score > 70 && ?people_score > 70)
+            }
         """))
     print(first_query)
     
 if __name__ == '__main__':
     #get_basic_Info()
     #get_Individuals_based_on_class("dtrfyguhi")
-    second_query()
+    first_query()
 
 
