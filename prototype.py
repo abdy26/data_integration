@@ -21,19 +21,32 @@ root.geometry("600x400")
 name_var=tk.StringVar()
 
 def onClick():
-   
-        tkinter.messagebox.showinfo("Welcome to GFG.",  print_query_format(second_query())) 
+    tkinter.messagebox.showinfo("Welcome to GFG.",  print_query_format(second_query())) 
 
 def onClick2():
-        tkinter.messagebox.showinfo("Welcome to GFG.",  print_query_format(first_query())) 
+    tkinter.messagebox.showinfo("Welcome to GFG.",  print_query_format(first_query())) 
         
 def onClick3():
-        tkinter.messagebox.showinfo("Welcome to GFG.",  print_query_format(third_query())) 
+    tkinter.messagebox.showinfo("Welcome to GFG.",  print_query_format(third_query())) 
         
 def onClick4():
-        tkinter.messagebox.showinfo("Welcome to GFG.",  print_query_format(fourth_query()))
+    directors = print_query_format(fourth_query())
+    print("directors ",directors)
+    direcor_list = directors.split(',')
+    print("directors_list ",direcor_list)
+    print("")
+    director_set = set(direcor_list)
+    print("directors_list ", director_set)
+    director_list = list(director_set)
+    print("directors_list ", director_list)
+    director_string = ""
+    
+    for director in director_list:
+        director_string = director_string + ", " + director
+    
+    tkinter.messagebox.showinfo("Welcome to GFG.",  director_string)
         
-        
+
 
 
 def first_query():
@@ -78,9 +91,7 @@ def fourth_query():
 
                 WHERE {
                     ?director rdf:type data_project:Director .
-
                     ?movie data_project:movie_critic_score ?critic_score .
-
                     FILTER (?critic_score > 70)
                 }
             """))
@@ -91,50 +102,42 @@ def print_query_format(query):
     
     format_str = ""
     for i in range(len(query)):
-        print(query[i][0].name)
-        format_str = format_str + "," + query[i][0].name
-        ##print("this is format name so far", format_str)
-        
+        format_str = format_str + "," + query[i][0].name    
     return format_str
         
 
 if __name__ == '__main__':
+    # creating a label
+    # Create a Button
+    directorsLabel = tk.Label(root, text = 'All directors', font=('calibre',15, 'bold'))
+    button = Button(root, text="Show Directors", command=onClick, height=2, width=8) 
     
-    print(print_query_format(fourth_query()))
-
-        
+    query1Label = tk.Label(root, text = 'What movies have a public score and a critic score of 70 or above ?', font=('calibre',15, 'bold'))
+    query1Button = Button(root, text="Click here", command=onClick2, height=2, width=10)
+    
+    query3Label = tk.Label(root, text = 'What movies have a public score over 75 and a budget over 100 M?', font=('calibre',15, 'bold'))
+    query3Button = Button(root, text="Click here", command=onClick3, height=2, width=10) 
+    
+    query4Label = tk.Label(root, text = 'What directors have movies with a critic score 70 or above?', font=('calibre',15, 'bold'))
+    query4Button = Button(root, text="Click here", command=onClick4, height=2, width=10) 
      
-# creating a label
-# Create a Button
-directorsLabel = tk.Label(root, text = 'All directors', font=('calibre',15, 'bold'))
-button = Button(root, text="Show Directors", command=onClick, height=2, width=8) 
-
-query1Label = tk.Label(root, text = 'What movies have a public score and a critic score of 70 or above ?', font=('calibre',15, 'bold'))
-query1Button = Button(root, text="Click here", command=onClick2, height=2, width=10)
-
-query3Label = tk.Label(root, text = 'What movies have a public score over 75 and a budget over 100 M?', font=('calibre',15, 'bold'))
-query3Button = Button(root, text="Click here", command=onClick3, height=2, width=10) 
-
-query4Label = tk.Label(root, text = 'What directors have movies with a critic score 70 or above?', font=('calibre',15, 'bold'))
-query4Button = Button(root, text="Click here", command=onClick4, height=2, width=10) 
- 
-
-  
-# grid method
-directorsLabel.grid(row=5,column=0)
-button.grid(row=6,column=0)
-query1Label.grid(row=7, column=0)
-query1Button.grid(row=8,column=0)
-query3Label.grid(row=9, column=0)
-query3Button.grid(row=10,column=0)
-query4Label.grid(row=11, column=0)
-query4Button.grid(row=12,column=0)
-
-
-  
-# performing an infinite loop
-# for the window to display
-root.mainloop()
+    
+      
+    # grid method
+    directorsLabel.grid(row=5,column=0)
+    button.grid(row=6,column=0)
+    query1Label.grid(row=7, column=0)
+    query1Button.grid(row=8,column=0)
+    query3Label.grid(row=9, column=0)
+    query3Button.grid(row=10,column=0)
+    query4Label.grid(row=11, column=0)
+    query4Button.grid(row=12,column=0)
+    
+    
+      
+    # performing an infinite loop
+    # for the window to display
+    root.mainloop()
 
 
 
