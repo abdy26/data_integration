@@ -62,11 +62,26 @@ def first_query():
               FILTER (?public_score > 70 && ?people_score > 70)
             }
         """))
+        
     print(first_query)
+    return first_query
     
+    
+def print_query_format(query):
+    print(query)
+    
+    format_str = ""
+    for i in range(len(query)):
+        print(query[i][0].name)
+        format_str = format_str + "," + query[i][0].name
+        print("this is format name so far", format_str)
+        
+    return format_str
+        
+
 if __name__ == '__main__':
     #get_basic_Info()
     #get_Individuals_based_on_class("dtrfyguhi")
-    first_query()
+    print_query_format(first_query())
 
 
